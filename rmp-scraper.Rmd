@@ -164,7 +164,7 @@ remDr$navigate("https://www.ratemyprofessors.com/search/professors/1439?q=*")
 ## Loop to click on "show more" professors
 
 ```{r}
-for (t in 1:10) {
+for (t in 1:444) {
   show_more <- remDr$findElement(using = "xpath", "//button[text()='Show More']")
   y_position <- show_more$getElementLocation()$y - 100
   remDr$executeScript(sprintf("window.scrollTo(0, %f)", y_position))  
